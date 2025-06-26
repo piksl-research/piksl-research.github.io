@@ -1,115 +1,227 @@
 ---
 ---
-
-@string{aps = {American Physical Society,}}
-
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
+@article{DEWEY2019160,
+    title = {DeepHarmony: A deep learning approach to contrast harmonization across scanner changes},
+    journal = {Magnetic Resonance Imaging},
+    volume = {64},
+    pages = {160-170},
+    year = {2019},
+    issn = {0730-725X},
+    doi = {10.1016/j.mri.2019.05.041},
+    author = {Blake E. Dewey and Can Zhao and Jacob C. Reinhold and Aaron Carass and Kathryn C. Fitzgerald and Elias S. Sotirchos and Shiv Saidha and Jiwon Oh and Dzung L. Pham and Peter A. Calabresi and Peter C.M. {van Zijl} and Jerry L. Prince},
+    keywords = {Deep learning, Contrast harmonization, Magnetic resonance imaging},
+    abstract = {Magnetic resonance imaging (MRI) is a flexible medical imaging modality that often lacks reproducibility between protocols and scanners. It has been shown that even when care is taken to standardize acquisitions, any changes in hardware, software, or protocol design can lead to differences in quantitative results. This greatly impacts the quantitative utility of MRI in multi-site or long-term studies, where consistency is often valued over image quality. We propose a method of contrast harmonization, called DeepHarmony, which uses a U-Net-based deep learning architecture to produce images with consistent contrast. To provide training data, a small overlap cohort (n = 8) was scanned using two different protocols. Images harmonized with DeepHarmony showed significant improvement in consistency of volume quantification between scanning protocols. A longitudinal MRI dataset of patients with multiple sclerosis was also used to evaluate the effect of a protocol change on atrophy calculations in a clinical research setting. The results show that atrophy calculations were substantially and significantly affected by protocol change, whereas such changes have a less significant effect and substantially reduced overall difference when using DeepHarmony. This establishes that DeepHarmony can be used with an overlap cohort to reduce inconsistencies in segmentation caused by changes in scanner protocol, allowing for modernization of hardware and protocol design in long-term studies without invalidating previously acquired data.},
+    google_scholar_id="cFHS6HbyZ2cC",
+    dimensions=true,
 }
 
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+@InProceedings{10.1007/978-3-030-59728-3_70,
+    author="Dewey, Blake E.
+    and Zuo, Lianrui
+    and Carass, Aaron
+    and He, Yufan
+    and Liu, Yihao
+    and Mowry, Ellen M.
+    and Newsome, Scott
+    and Oh, Jiwon
+    and Calabresi, Peter A.
+    and Prince, Jerry L.",
+    editor="Martel, Anne L.
+    and Abolmaesumi, Purang
+    and Stoyanov, Danail
+    and Mateus, Diana
+    and Zuluaga, Maria A.
+    and Zhou, S. Kevin
+    and Racoceanu, Daniel
+    and Joskowicz, Leo",
+    title="A Disentangled Latent Space for Cross-Site MRI Harmonization",
+    booktitle="Medical Image Computing and Computer Assisted Intervention -- MICCAI 2020",
+    year="2020",
+    publisher="Springer International Publishing",
+    address="Cham",
+    pages="720--729",
+    abstract="Accurate interpretation and quantification of magnetic resonance imaging (MRI) is vital to medical research and clinical practice. However, lack of MRI standardization and differences in acquisition protocols often lead to measurement inconsistencies across sites. Image harmonization techniques have been shown to improve qualitative and quantitative consistency between differently acquired scans. Unfortunately, these methods typically require paired training data from traveling subjects (for supervised methods) or assumptions about anatomical similarities between the populations (for unsupervised methods). We propose a deep learning-based harmonization technique with limited supervision for use in standardization across scanners and sites. By leveraging a disentangled latent space represented by a high-resolution anatomical information component ({\$}{\$}{\backslash}beta {\$}{\$}$\beta$) and a low-dimensional contrast component ({\$}{\$}{\backslash}theta {\$}{\$}$\theta$), the proposed method trains a cross-site harmonization model using databases of multi-modal image pairs acquired separately from each of the scanners to be harmonized. In this manuscript, we show that by using T{\$}{\$}{\_}1{\$}{\$}1-weighted and T{\$}{\$}{\_}2{\$}{\$}2-weighted images acquired from different subjects at three different sites, we can achieve a stable extraction of {\$}{\$}{\backslash}beta {\$}{\$}$\beta$with a continuous representation of {\$}{\$}{\backslash}theta {\$}{\$}$\theta$. We also demonstrate that this allows cross-site harmonization without the need for paired data between sites.",
+    isbn="978-3-030-59728-3",
+    doi="10.1007/978-3-030-59728-3_70",
+    google_scholar_id="bFI3QPDXJZMC",
+    dimensions=true,
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+
+@ARTICLE{9253710,
+    author={Zhao, Can and Dewey, Blake E. and Pham, Dzung L. and Calabresi, Peter A. and Reich, Daniel S. and Prince, Jerry L.},
+    journal={IEEE Transactions on Medical Imaging},
+    title={SMORE: A Self-Supervised Anti-Aliasing and Super-Resolution Algorithm for MRI Using Deep Learning},
+    year={2021},
+    volume={40},
+    number={3},
+    pages={805-817},
+    keywords={Magnetic resonance imaging;Three-dimensional displays;Two dimensional displays;Training data;Protocols;self-supervised;super-resolution;deep network;magnetic resonance imaging;convolutional neural network;anti-aliasing},
+    doi={10.1109/TMI.2020.3037187},
+    abstract={High resolution magnetic resonance (MR) images are desired in many clinical and research applications. Acquiring such images with high signal-to-noise (SNR), however, can require a long scan duration, which is difficult for patient comfort, is more costly, and makes the images susceptible to motion artifacts. A very common practical compromise for both 2D and 3D MR imaging protocols is to acquire volumetric MR images with high in-plane resolution, but lower through-plane resolution. In addition to having poor resolution in one orientation, 2D MRI acquisitions will also have aliasing artifacts, which further degrade the appearance of these images. This paper presents an approach SMORE based on convolutional neural networks (CNNs) that restores image quality by improving resolution and reducing aliasing in MR images. This approach is self-supervised, which requires no external training data because the high-resolution and low-resolution data that are present in the image itself are used for training. For 3D MRI, the method consists of only one self-supervised super-resolution (SSR) deep CNN that is trained from the volumetric image data. For 2D MRI, there is a self-supervised anti-aliasing (SAA) deep CNN that precedes the SSR CNN, also trained from the volumetric image data. Both methods were evaluated on a broad collection of MR data, including filtered and downsampled images so that quantitative metrics could be computed and compared, and actual acquired low resolution images for which visual and sharpness measures could be computed and compared. The super-resolution method is shown to be visually and quantitatively superior to previously reported methods},
+    google_scholar_id="fQNAKQ3IYiAC",
+    dimensions=true,
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
-  selected={true},
-  inspirehep_id = {3255}
+@article{ZUO2021118569,
+    title = {Unsupervised MR harmonization by learning disentangled representations using information bottleneck theory},
+    journal = {NeuroImage},
+    volume = {243},
+    pages = {118569},
+    year = {2021},
+    issn = {1053-8119},
+    doi = {10.1016/j.neuroimage.2021.118569},
+    author = {Lianrui Zuo and Blake E. Dewey and Yihao Liu and Yufan He and Scott D. Newsome and Ellen M. Mowry and Susan M. Resnick and Jerry L. Prince and Aaron Carass},
+    keywords = {Harmonization, Magnetic resonance imaging, Disentangle, Image synthesis, Image-to-image translation},
+    abstract = {In magnetic resonance (MR) imaging, a lack of standardization in acquisition often causes pulse sequence-based contrast variations in MR images from site to site, which impedes consistent measurements in automatic analyses. In this paper, we propose an unsupervised MR image harmonization approach, CALAMITI (Contrast Anatomy Learning and Analysis for MR Intensity Translation and Integration), which aims to alleviate contrast variations in multi-site MR imaging. Designed using information bottleneck theory, CALAMITI learns a globally disentangled latent space containing both anatomical and contrast information, which permits harmonization. In contrast to supervised harmonization methods, our approach does not need a sample population to be imaged across sites. Unlike traditional unsupervised harmonization approaches which often suffer from geometry shifts, CALAMITI better preserves anatomy by design. The proposed method is also able to adapt to a new testing site with a straightforward fine-tuning process. Experiments on MR images acquired from ten sites show that CALAMITI achieves superior performance compared with other harmonization approaches.},
+    google_scholar_id={zYLM7Y9cAGgC},
+    dimensions=true,
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
+@InProceedings{10.1007/978-3-030-78191-0_27,
+    author="Zuo, Lianrui
+        and Dewey, Blake E.
+        and Carass, Aaron
+        and Liu, Yihao
+        and He, Yufan
+        and Calabresi, Peter A.
+        and Prince, Jerry L.",
+    editor="Feragen, Aasa
+        and Sommer, Stefan
+        and Schnabel, Julia
+        and Nielsen, Mads",
+    title="Information-Based Disentangled Representation Learning for Unsupervised MR Harmonization",
+    booktitle="Information Processing in Medical Imaging",
+    year="2021",
+    publisher="Springer International Publishing",
+    address="Cham",
+    pages="346--359",
+    abstract="Accuracy and consistency are two key factors in computer-assisted magnetic resonance (MR) image analysis. However, contrast variation from site to site caused by lack of standardization in MR acquisition impedes consistent measurements. In recent years, image harmonization approaches have been proposed to compensate for contrast variation in MR images. Current harmonization approaches either require cross-site traveling subjects for supervised training or heavily rely on site-specific harmonization models to encourage harmonization accuracy. These requirements potentially limit the application of current harmonization methods in large-scale multi-site studies. In this work, we propose an unsupervised MR harmonization framework, CALAMITI (Contrast Anatomy Learning and Analysis for MR Intensity Translation and Integration), based on information bottleneck theory. CALAMITI learns a disentangled latent space using a unified structure for multi-site harmonization without the need for traveling subjects. Our model is also able to adapt itself to harmonize MR images from a new site with fine tuning solely on images from the new site. Both qualitative and quantitative results show that the proposed method achieves superior performance compared with other unsupervised harmonization approaches.",
+    isbn="978-3-030-78191-0",
+    doi={10.1007/978-3-030-78191-0_27},
+    google_scholar_id={TFP_iSt0sucC},
+    dimensions=true,
 }
 
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
+@InProceedings{10.1007/978-3-031-44689-4_12,
+    author="Remedios, Samuel W.
+        and Han, Shuo
+        and Zuo, Lianrui
+        and Carass, Aaron
+        and Pham, Dzung L.
+        and Prince, Jerry L.
+        and Dewey, Blake E.",
+    editor="Wolterink, Jelmer M.
+        and Svoboda, David
+        and Zhao, Can
+        and Fernandez, Virginia",
+    title="Self-Supervised Super-Resolution for Anisotropic MR Images with and Without Slice Gap",
+    booktitle="Simulation and Synthesis in Medical Imaging",
+    year="2023",
+    publisher="Springer Nature Switzerland",
+    address="Cham",
+    pages="118--128",
+    abstract="Magnetic resonance (MR) images are often acquired as multi-slice volumes to reduce scan time and motion artifacts while improving signal-to-noise ratio. These slices often are thicker than their in-plane resolution and sometimes are acquired with gaps between slices. Such thick-slice image volumes (possibly with gaps) can impact the accuracy of volumetric analysis and 3D methods. While many super-resolution (SR) methods have been proposed to address thick slices, few have directly addressed the slice gap scenario. Furthermore, data-driven methods are sensitive to domain shift due to the variability of resolution, contrast in acquisition, pathology, and differences in anatomy. In this work, we propose a self-supervised SR technique to address anisotropic MR images with and without slice gap. We compare against competing methods and validate in both signal recovery and downstream task performance on two open-source datasets and show improvements in all respects. Our code publicly available at https://gitlab.com/iacl/smore.",
+    isbn="978-3-031-44689-4",
+    doi={10.1007/978-3-031-44689-4_12},
+    google_scholar_id={r0BpntZqJG4C},
+    dimensions=true,
 }
 
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
+@article {Dewey1396,
+	author = {Dewey, B.E. and Xu, X. and Knutsson, L. and Jog, A. and Prince, J.L. and Barker, P.B. and van Zijl, P.C.M. and Leigh, R. and Nyquist, P.},
+	title = {MTT and Blood-Brain Barrier Disruption within Asymptomatic Vascular WM Lesions},
+	volume = {42},
+	number = {8},
+	pages = {1396--1402},
+	year = {2021},
+	doi = {10.3174/ajnr.A7165},
+	publisher = {American Journal of Neuroradiology},
+	abstract = {BACKGROUND AND PURPOSE: White matter lesions of presumed ischemic origin are associated with progressive cognitive impairment and impaired BBB function. Studying the longitudinal effects of white matter lesion biomarkers that measure changes in perfusion and BBB patency within white matter lesions is required for long-term studies of lesion progression. We studied perfusion and BBB disruption within white matter lesions in asymptomatic subjects.MATERIALS AND METHODS: Anatomic imaging was followed by consecutive dynamic contrast-enhanced and DSC imaging. White matter lesions in 21 asymptomatic individuals were determined using a Subject-Specific Sparse Dictionary Learning algorithm with manual correction. Perfusion-related parameters including CBF, MTT, the BBB leakage parameter, and volume transfer constant were determined.RESULTS: MTT was significantly prolonged (7.88 [SD, 1.03] seconds) within white matter lesions compared with normal-appearing white (7.29 [SD, 1.14] seconds) and gray matter (6.67 [SD, 1.35] seconds). The volume transfer constant, measured by dynamic contrast-enhanced imaging, was significantly elevated (0.013 [SD, 0.017] minutes-1) in white matter lesions compared with normal-appearing white matter (0.007 [SD, 0.011] minutes-1). BBB disruption within white matter lesions was detected relative to normal white and gray matter using the DSC-BBB leakage parameter method so that increasing BBB disruption correlated with increasing white matter lesion volume (Spearman correlation coefficient = 0.44; P \&lt; .046).CONCLUSIONS: A dual-contrast-injection MR imaging protocol combined with a 3D automated segmentation analysis pipeline was used to assess BBB disruption in white matter lesions on the basis of quantitative perfusion measures including the volume transfer constant (dynamic contrast-enhanced imaging), the BBB leakage parameter (DSC), and MTT (DSC). This protocol was able to detect early pathologic changes in otherwise healthy individuals.cSVDcerebrovascular small-vessel diseaseDCEdynamic contrast-enhancedGdgadoliniumK2BBB leakage parameterKtransvolume transfer constantWMLwhite matter lesion},
+	issn = {0195-6108},
+	URL = {https://www.ajnr.org/content/42/8/1396},
+	eprint = {https://www.ajnr.org/content/42/8/1396.full.pdf},
+	journal = {American Journal of Neuroradiology},
+	google_scholar_id={JV2RwH3_ST0C},
+    dimensions=true,
 }
 
-@Article{einstein1905photoelectriceffect,
-  bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
+@article {Dewey823,
+	author = {Dewey, Blake E. and Remedios, Samuel W. and Sanjayan, Muraleetharan and Rjeily, Nicole Bou and Lee, Alexandra Zambriczki and Wyche, Chelsea and Duncan, Safiya and Prince, Jerry L. and Calabresi, Peter A. and Fitzgerald, Kathryn C. and Mowry, Ellen M.},
+	title = {Super-Resolution in Clinically Available Spinal Cord MRIs Enables Automated Atrophy Analysis},
+	volume = {46},
+	number = {4},
+	pages = {823--831},
+	year = {2025},
+	doi = {10.3174/ajnr.A8526},
+	publisher = {American Journal of Neuroradiology},
+	abstract = {BACKGROUND AND PURPOSE: Measurement of the mean upper cervical cord area (MUCCA) is an important biomarker in the study of neurodegeneration. However, dedicated high-resolution (HR) scans of the cervical spinal cord are rare in standard-of-care imaging due to timing and clinical usability. Most clinical cervical spinal cord imaging is sagittally acquired in 2D with thick slices and anisotropic voxels. As a solution, previous work describes HR T1-weighted brain imaging for measuring the upper cord area, but this is still not common in clinical care.MATERIALS AND METHODS: We propose using a zero-shot super-resolution technique, synthetic multi-orientation resolution enhancement (SMORE), already validated in the brain, to enhance the resolution of 2D-acquired scans for upper cord area calculations. To incorporate super-resolution in spinal cord analysis, we validate SMORE against HR research imaging and in a real-world longitudinal data analysis.RESULTS: Super-resolved (SR) images reconstructed by using SMORE showed significantly greater similarity to the ground truth than low-resolution (LR) images across all tested resolutions (P \&lt; .001 for all resolutions in peak signal-to-noise ratio [PSNR] and mean structural similarity [MSSIM]). MUCCA results from SR scans demonstrate excellent correlation with HR scans (r \&gt; 0.973 for all resolutions) compared with LR scans. Additionally, SR scans are consistent between resolutions (r \&gt; 0.969), an essential factor in longitudinal analysis. Compared with clinical outcomes such as walking speed or disease severity, MUCCA values from LR scans have significantly lower correlations than those from HR scans. SR results have no significant difference. In a longitudinal real-world data set, we show that these SR volumes can be used in conjunction with T1-weighted brain scans to show a significant rate of atrophy (-0.790, P = .020 versus -0.438, P = .301 with LR).CONCLUSIONS: Super-resolution is a valuable tool for enabling large-scale studies of cord atrophy, as LR images acquired in clinical practice are common and available.9HPT9-hole peg testCSCcervical spinal cordEDSSExpanded Disability Status ScaleHRhigh-resolutionLRlow-resolutionMSFCMS functional compositeMSSIMmean structural similarityMUCCAmean upper cervical cord areaPMJpontomedullary junctionPSNRpeak signal-to-noise ratioSMOREsynthetic multi-orientation resolution enhancementSRsuper-resolvedT25FWtimed 25-foot walk},
+	issn = {0195-6108},
+	eprint = {https://www.ajnr.org/content/46/4/823.full.pdf},
+	journal = {American Journal of Neuroradiology},
+	google_scholar_id={fPk4N6BV_jEC},
+    dimensions=true,
 }
 
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
+@misc{remedios2025eclareefficientcrossplanarlearning,
+      title={ECLARE: Efficient cross-planar learning for anisotropic resolution enhancement},
+      author={Samuel W. Remedios and Shuwen Wei and Shuo Han and Jinwei Zhang and Aaron Carass and Kurt G. Schilling and Dzung L. Pham and Jerry L. Prince and Blake E. Dewey},
+      year={2025},
+      eprint={2503.11787},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      abstract="In clinical imaging, magnetic resonance (MR) image volumes are often acquired as stacks of 2D slices with decreased scan times, improved signal-to-noise ratio, and image contrasts unique to 2D MR pulse sequences. While this is sufficient for clinical evaluation, automated algorithms designed for 3D analysis perform poorly on multi-slice 2D MR volumes, especially those with thick slices and gaps between slices. Super-resolution (SR) methods aim to address this problem, but previous methods do not address all of the following: slice profile shape estimation, slice gap, domain shift, and non-integer or arbitrary upsampling factors. In this paper, we propose ECLARE (Efficient Cross-planar Learning for Anisotropic Resolution Enhancement), a self-SR method that addresses each of these factors. ECLARE uses a slice profile estimated from the multi-slice 2D MR volume, trains a network to learn the mapping from low-resolution to high-resolution in-plane patches from the same volume, and performs SR with anti-aliasing. We compared ECLARE to cubic B-spline interpolation, SMORE, and other contemporary SR methods. We used realistic and representative simulations so that quantitative performance against ground truth can be computed, and ECLARE outperformed all other methods in both signal recovery and downstream tasks. Importantly, as ECLARE does not use external training data it cannot suffer from domain shift between training and testing.",
+      arxiv={2503.11787},
+      doi={10.48550/arXiv.2503.11787},
+      google_scholar_id={9ZlFYXVOiuMC},
+      dimensions=true,
+}
+
+@inproceedings{10.1117/12.2513089,
+    author = {Jacob C. Reinhold and Blake E. Dewey and Aaron Carass and Jerry L. Prince},
+    title = {{Evaluating the impact of intensity normalization on MR image synthesis}},
+    volume = {10949},
+    booktitle = {Medical Imaging 2019: Image Processing},
+    editor = {Elsa D. Angelini and Bennett A. Landman},
+    organization = {International Society for Optics and Photonics},
+    publisher = {SPIE},
+    pages = {109493H},
+    abstract = {Image synthesis learns a transformation from the intensity features of an input image to yield a different tissue contrast of the output image. This process has been shown to have application in many medical image analysis tasks including imputation, registration, and segmentation. To carry out synthesis, the intensities of the input images are typically scaled—i.e., normalized—both in training to learn the transformation and in testing when applying the transformation, but it is not presently known what type of input scaling is optimal. In this paper, we consider seven different intensity normalization algorithms and three different synthesis methods to evaluate the impact of normalization. Our experiments demonstrate that intensity normalization as a preprocessing step improves the synthesis results across all investigated synthesis algorithms. Furthermore, we show evidence that suggests intensity normalization is vital for successful deep learning-based MR image synthesis.},
+    keywords = {image synthesis, brain MRI, intensity normalization, deep neural networks},
+    year = {2019},
+    doi = {10.1117/12.2513089},
+    google = {hqOjcs7Dif8C},
+    dimensions = true,
+}
+
+@article{ZUO2023102285,
+    title = {HACA3: A unified approach for multi-site MR image harmonization},
+    journal = {Computerized Medical Imaging and Graphics},
+    volume = {109},
+    pages = {102285},
+    year = {2023},
+    issn = {0895-6111},
+    doi = {10.1016/j.compmedimag.2023.102285},
+    author = {Lianrui Zuo and Yihao Liu and Yuan Xue and Blake E. Dewey and Samuel W. Remedios and Savannah P. Hays and Murat Bilgel and Ellen M. Mowry and Scott D. Newsome and Peter A. Calabresi and Susan M. Resnick and Jerry L. Prince and Aaron Carass},
+    keywords = {MRI, Harmonization, Standardization, Disentanglement, Attention, Contrastive learning, Synthesis},
+    abstract = {The lack of standardization and consistency of acquisition is a prominent issue in magnetic resonance (MR) imaging. This often causes undesired contrast variations in the acquired images due to differences in hardware and acquisition parameters. In recent years, image synthesis-based MR harmonization with disentanglement has been proposed to compensate for the undesired contrast variations. The general idea is to disentangle anatomy and contrast information from MR images to achieve cross-site harmonization. Despite the success of existing methods, we argue that major improvements can be made from three aspects. First, most existing methods are built upon the assumption that multi-contrast MR images of the same subject share the same anatomy. This assumption is questionable, since different MR contrasts are specialized to highlight different anatomical features. Second, these methods often require a fixed set of MR contrasts for training (e.g., both T1-weighted and T2-weighted images), limiting their applicability. Lastly, existing methods are generally sensitive to imaging artifacts. In this paper, we present Harmonization with Attention-based Contrast, Anatomy, and Artifact Awareness (HACA3), a novel approach to address these three issues. HACA3 incorporates an anatomy fusion module that accounts for the inherent anatomical differences between MR contrasts. Furthermore, HACA3 can be trained and applied to any combination of MR contrasts and is robust to imaging artifacts. HACA3 is developed and evaluated on diverse MR datasets acquired from 21 sites with varying field strengths, scanner platforms, and acquisition protocols. Experiments show that HACA3 achieves state-of-the-art harmonization performance under multiple image quality metrics. We also demonstrate the versatility and potential clinical impact of HACA3 on downstream tasks including white matter lesion segmentation for people with multiple sclerosis and longitudinal volumetric analyses for normal aging subjects. Code is available at https://github.com/lianruizuo/haca3.},
+    google_scholar_id = {XiSMed-E-HIC},
+    dimensions = true,
+}
+
+
+@article{park_development_2024,
+    title = {Development of {Medical} {Imaging} {Data} {Standardization} for {Imaging}-{Based} {Observational} {Research}: {OMOP} {Common} {Data} {Model} {Extension}},
+    volume = {37},
+    issn = {2948-2933},
+    doi = {10.1007/s10278-024-00982-6},
+    abstract = {The rapid growth of artificial intelligence (AI) and deep learning techniques require access to large inter-institutional cohorts of data to enable the development of robust models, e.g., targeting the identification of disease biomarkers and quantifying disease progression and treatment efficacy. The Observational Medical Outcomes Partnership Common Data Model (OMOP CDM) has been designed to accommodate a harmonized representation of observational healthcare data. This study proposes the Medical Imaging CDM (MI-CDM) extension, adding two new tables and two vocabularies to the OMOP CDM to address the structural and semantic requirements to support imaging research. The tables provide the capabilities of linking DICOM data sources as well as tracking the provenance of imaging features derived from those images. The implementation of the extension enables phenotype definitions using imaging features and expanding standardized computable imaging biomarkers. This proposal offers a comprehensive and unified approach for conducting imaging research and outcome studies utilizing imaging features.},
+    number = {2},
+    journal = {Journal of Imaging Informatics in Medicine},
+    author = {Park, Woo Yeon and Jeon, Kyulee and Schmidt, Teri Sippel and Kondylakis, Haridimos and Alkasab, Tarik and Dewey, Blake E. and You, Seng Chan and Nagy, Paul},
+    month = apr,
+    year = {2024},
+    pages = {899--908},
+    google_scholar_id = {_Qo2XoVZTnwC},
+    dimensions = true,
 }

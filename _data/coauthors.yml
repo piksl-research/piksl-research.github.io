@@ -1,10 +1,12 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"dewey":
+  - firstname: ["Blake", "B.", "B. E.", "Blake E."]
+    lastname: ["Dewey"]
+    url: https://profiles.hopkinsmedicine.org/provider/blake-dewey/3192849
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"remedios":
+  - firstname: ["Samuel", "S.", "S. W.", "Samuel W."]
+    lastname: ["Remedios"]
+    url: https://sremedios.github.io/
 
 "rosen":
   - firstname: ["Nathan", "N."]

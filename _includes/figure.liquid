@@ -19,6 +19,11 @@
           class="responsive-img-srcset"
           {% if ext == 'gif' or ext == 'jpeg' or ext == 'jpg' or ext == 'png' or ext == 'tiff' %}
             srcset="{% for i in site.imagemagick.widths %}{{ img_path | relative_url }}-{{ i }}.webp {{ i }}w,{% endfor %}"
+            data-srcset="{% for i in site.imagemagick.widths %}{{ img_path | relative_url }}-{{ i }}.webp {{ i }}w,{% endfor %}"
+            {% if include.dark_path %}
+                {% assign dark_img_path = include.dark_path | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' %}
+                data-srcset-dark="{% for i in site.imagemagick.widths %}{{ dark_img_path | relative_url }}-{{ i }}.webp {{ i }}w,{% endfor %}"
+            {% endif %}
             type="image/webp"
           {% else %}
             srcset="{{ include.path | relative_url }}"
@@ -33,6 +38,10 @@
     {% endif %}
     <img
       src="{% if include.url %}{{ include.url }}{% elsif include.cache_bust %}{{ include.path | relative_url | bust_file_cache }}{% else %}{{ include.path | relative_url }}{% endif %}"
+      data-src="{% if include.url %}{{ include.url }}{% elsif include.cache_bust %}{{ include.path | relative_url | bust_file_cache }}{% else %}{{ include.path | relative_url }}{% endif %}"
+      {% if include.dark_path %}
+        data-src-dark="{% if include.url %}{{ include.url }}{% elsif include.cache_bust %}{{ include.dark_path | relative_url | bust_file_cache }}{% else %}{{ include.dark_path | relative_url }}{% endif %}"
+      {% endif %}
       {% if include.class %}
         class="{{ include.class }}"
       {% endif %}

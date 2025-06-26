@@ -23,8 +23,10 @@ layout: page
         </div>
 
         <div class="clearfix">
+          <h3>{{ profile.name }}</h3>
           {% if profile.content %}
-            {% capture profile_content %}{% include_relative {{ profile.content }} %}{% endcapture %}
+            {% assign profile_content_path = profile.content | prepend: 'profiles/' %}
+            {% capture profile_content %}{% include_relative {{ profile_content_path }} %}{% endcapture %}
             {{ profile_content | markdownify }}
           {% else %}
             {{ content }}

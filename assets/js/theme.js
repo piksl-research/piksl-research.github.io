@@ -86,6 +86,9 @@ let applyTheme = () => {
       background: getComputedStyle(document.documentElement).getPropertyValue("--global-bg-color") + "ee", // + 'ee' for trasparency.
     });
   }
+
+  // Updates images that have dark and light modes.
+  swapThemeAssets(theme);
 };
 
 let setHighlight = (theme) => {
@@ -251,6 +254,27 @@ let transTheme = () => {
   }, 500);
 };
 
+function swapThemeAssets(theme) {
+  // swap <img>
+  document.querySelectorAll('img[data-src-dark]').forEach(img => {
+    img.src = (theme === 'dark') ? img.dataset.srcDark : img.dataset.src;
+  });
+
+  // swap each <source>
+  document.querySelectorAll('source[data-srcset-dark]').forEach(src => {
+    src.srcset = (theme === 'dark')
+      ? src.dataset.srcsetDark
+      : src.dataset.srcset;
+  });
+}
+
+function updateFavicon() {
+  const favicon = document.getElementById("favicon");
+  favicon.href = (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ? favicon.dataset.hrefDark
+    : favicon.dataset.href;
+}
+
 // Determine the expected state of the theme toggle, which can be "dark", "light", or
 // "system". Default is "system".
 let determineThemeSetting = () => {
@@ -294,5 +318,12 @@ let initTheme = () => {
   // Add event listener to the system theme preference change.
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
     applyTheme();
+    updateFavicon();
   });
 };
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initTheme);
+} else {
+  initTheme();
+}
