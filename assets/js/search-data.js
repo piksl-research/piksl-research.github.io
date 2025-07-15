@@ -37,13 +37,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/repositories/";
           },
-        },{id: "nav-courses",
-          title: "courses",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/courses/";
-          },
         },{id: "nav-people",
           title: "people",
           description: "",
@@ -51,7 +44,26 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/people/";
           },
-        },{
+        },{id: "post-creating-an-mri-mega-dataset",
+        
+          title: "Creating an MRI Mega-Dataset",
+        
+        description: "how we collected over 80k high-quality, publicly available image volumes",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/mega-datasets/";
+          
+        },
+      },{id: "news-3d-mri-ddpm-project-release",
+          title: '3D MRI DDPM Project Release',
+          description: "",
+          section: "News",},{id: "projects-ddpms-for-mri",
+          title: 'DDPMs for MRI',
+          description: "Diffusion-Driven Generation of Minimally Preprocessed Brain MRI",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ddpm-3dmri/";
+            },},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
