@@ -3,6 +3,7 @@ github_users:
 repo_description_lines_max: 2
 
 github_repos:
+  - piksl-research/medforj
   - jh-mipc/radifox
   - jh-mipc/radifox-convert
   - blakedewey/phase_unwrap

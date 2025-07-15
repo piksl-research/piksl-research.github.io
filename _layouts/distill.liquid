@@ -19,7 +19,9 @@
       {
             "title": "{{ page.title }}",
             "description": "{{ page.description }}",
+            {% unless page.preprint %}
             "published": "{{ page.date | date: '%B %d, %Y' }}",
+            {% endunless %}
             "authors": [
               {% for author in page.authors %}
               {
