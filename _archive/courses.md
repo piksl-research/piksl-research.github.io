@@ -5,7 +5,7 @@ title: courses
 description:
 nav: true
 nav_order: 6
-display_categories: 
+display_categories:
 horizontal: false
 ---
 

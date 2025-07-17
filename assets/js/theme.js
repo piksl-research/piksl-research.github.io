@@ -256,23 +256,19 @@ let transTheme = () => {
 
 function swapThemeAssets(theme) {
   // swap <img>
-  document.querySelectorAll('img[data-src-dark]').forEach(img => {
-    img.src = (theme === 'dark') ? img.dataset.srcDark : img.dataset.src;
+  document.querySelectorAll("img[data-src-dark]").forEach((img) => {
+    img.src = theme === "dark" ? img.dataset.srcDark : img.dataset.src;
   });
 
   // swap each <source>
-  document.querySelectorAll('source[data-srcset-dark]').forEach(src => {
-    src.srcset = (theme === 'dark')
-      ? src.dataset.srcsetDark
-      : src.dataset.srcset;
+  document.querySelectorAll("source[data-srcset-dark]").forEach((src) => {
+    src.srcset = theme === "dark" ? src.dataset.srcsetDark : src.dataset.srcset;
   });
 }
 
 function updateFavicon() {
   const favicon = document.getElementById("favicon");
-  favicon.href = (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ? favicon.dataset.hrefDark
-    : favicon.dataset.href;
+  favicon.href = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? favicon.dataset.hrefDark : favicon.dataset.href;
 }
 
 // Determine the expected state of the theme toggle, which can be "dark", "light", or
@@ -322,8 +318,8 @@ let initTheme = () => {
   });
 };
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initTheme);
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initTheme);
 } else {
   initTheme();
 }

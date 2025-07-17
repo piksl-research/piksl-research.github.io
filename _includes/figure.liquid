@@ -24,8 +24,8 @@
             srcset="{% for i in site.imagemagick.widths %}{{ img_path | relative_url }}-{{ i }}.webp {{ i }}w,{% endfor %}"
             data-srcset="{% for i in site.imagemagick.widths %}{{ img_path | relative_url }}-{{ i }}.webp {{ i }}w,{% endfor %}"
             {% if include.dark_path %}
-                {% assign dark_img_path = include.dark_path | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' %}
-                data-srcset-dark="{% for i in site.imagemagick.widths %}{{ dark_img_path | relative_url }}-{{ i }}.webp {{ i }}w,{% endfor %}"
+              {% assign dark_img_path = include.dark_path | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' %}
+              data-srcset-dark="{% for i in site.imagemagick.widths %}{{ dark_img_path | relative_url }}-{{ i }}.webp {{ i }}w,{% endfor %}"
             {% endif %}
             type="image/webp"
           {% else %}

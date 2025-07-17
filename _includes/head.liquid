@@ -69,7 +69,7 @@
     rel="shortcut icon"
     href="{{ site.icon | prepend: '/assets/img/' | relative_url | bust_file_cache}}"
     data-href="{{ site.icon | prepend: '/assets/img/' | relative_url | bust_file_cache}}"
-    {%  if site.dark_icon != blank %}
+    {% if site.dark_icon != blank %}
       data-href-dark="{{ site.dark_icon | prepend: '/assets/img/' | relative_url | bust_file_cache }}"
     {% endif %}
   >

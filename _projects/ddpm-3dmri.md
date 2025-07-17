@@ -17,10 +17,11 @@ toc:
 ---
 
 ## Background and Methods
+
 Training a deep generative model for 3D medical images, such as magnetic resonance (MR) images, is a challenging task.
 The current state-of-the-art uses Denoising Diffusion Probabilistic Models (DDPMs), which progressively transform noise into a sample from the training distribution.
 As MR images are frequently acquired in 3D (or stacked 2D slices), a generative model needs 3D consistency, which means (usually) a 3D network.
-3D DDPMs, however, are *large*, *data-hungry*, and *slow*.
+3D DDPMs, however, are _large_, _data-hungry_, and _slow_.
 
 To train one of these large models, we needed a very large training set of varied, but still high-quality data.
 We collected 38 publically available datasets and curated them for high-resolution, high-quality T$_1$-weighted brain images (see our [blog post](/blog/2025/mega-datasets/) for more details).
@@ -36,7 +37,6 @@ We wanted to try all of these methods to evaluate which would provide the best r
 ## Results
 
 We found that in our training, noise prediction failed to converge, while sample, velocity and flow models all produced brain-like samples.
-
 
 <div class="row">
     <div class="col-sm mt-md-0">
@@ -72,6 +72,7 @@ Their volumes, while not exactly aligned with the testing distribution, were qui
 </div>
 
 ## Paper and Models
+
 Our paper is currently under-review with a preprint on the way soon.
 
 Code (and pre-trained weights) for these models is available on [Github](https://github.com/piksl-research/medforj)
