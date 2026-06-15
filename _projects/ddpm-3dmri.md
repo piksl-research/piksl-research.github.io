@@ -3,10 +3,9 @@ layout: distill
 title: DDPMs for MRI
 description: Diffusion-Driven Generation of Minimally Preprocessed Brain MRI
 img: assets/img/Picture1.png
-tags: mri generative-ai open-data
-preprint: true
+tags: ["mri", "generative-ai", "open-data"]
 giscus_comments: false
-featured: false
+featured: true
 
 bibliography: 2018-12-22-distill.bib
 
@@ -18,17 +17,17 @@ toc:
 
 ## Background and Methods
 
-Training a deep generative model for 3D medical images, such as magnetic resonance (MR) images, is a challenging task.
-The current state-of-the-art uses Denoising Diffusion Probabilistic Models (DDPMs), which progressively transform noise into a sample from the training distribution.
-As MR images are frequently acquired in 3D (or stacked 2D slices), a generative model needs 3D consistency, which means (usually) a 3D network.
+Training a deep generative model for 3D medical images, such as magnetic resonance (MR) images, is challenging.
+Denoising Diffusion Probabilistic Models (DDPMs) progressively transform noise into a sample from the training distribution and have become a leading approach for high-fidelity image generation.
+As MR images are frequently acquired in 3D (or stacked 2D slices), a useful generative model needs 3D consistency, which usually means a 3D network.
 3D DDPMs, however, are _large_, _data-hungry_, and _slow_.
 
 To train one of these large models, we needed a very large training set of varied, but still high-quality data.
-We collected 38 publically available datasets and curated them for high-resolution, high-quality T$_1$-weighted brain images (see our [blog post](/blog/2025/mega-datasets/) for more details).
+We collected 38 publicly available datasets and curated them for high-resolution, high-quality T$_1$-weighted brain images (see our [blog post](/blog/2025/mega-datasets/) for more details).
 
-We want our models to be useful to as many users as possible, so we avoided some of the common steps used to reduce the complexity of the data (registration, bias correction, downsampling, latent models, etc.).
-3D DDPMs are big models, so tested different prediction methods to determine which would be stable and converge (relatively) quickly.
-This led us to train a whole suite of models using different prediction methods to generate the most realistic images possible.
+We want our models to be useful to as many users as possible, so we avoided common steps used to reduce data complexity, including registration, bias correction, downsampling, and latent compression.
+Because 3D DDPMs are large models, we tested different prediction methods to determine which were stable and converged relatively quickly.
+This led us to train a suite of models using different prediction methods and compare their ability to generate realistic 3D brain MRI.
 DDPMs use a U-Net to predict how to denoise an image, but that can be done in multiple ways.
 Commonly, networks will either predict the noise ($\hat{\epsilon}$) or the sample (sample, $\hat{x}_0$).
 But groups have also proposed methods that predict weighted or unweighted sums of the noise and clean image, called velocity ($\hat{\nu}$) prediction and flow ($\hat{\mu}$) matching, respectively.
@@ -73,6 +72,6 @@ Their volumes, while not exactly aligned with the testing distribution, were qui
 
 ## Paper and Models
 
-Our paper is currently under-review with a preprint on the way soon.
+This work is currently under review at _Scientific Reports_. A preprint is available on [arXiv](https://arxiv.org/abs/2510.26834).
 
-Code (and pre-trained weights) for these models is available on [Github](https://github.com/piksl-research/medforj)
+Code and pre-trained weights for these models are available on [GitHub](https://github.com/piksl-research/medforj).

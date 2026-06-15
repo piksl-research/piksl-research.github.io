@@ -14,7 +14,7 @@ profiles:
     image: dewey.jpeg
     content: dewey.md
     image_circular: false # crops the image to make it circular
-  - name: Samuel Remedios, MS
+  - name: Samuel Remedios, PhD
     align: left
     image: remedios.jpg
     content: remedios.md
